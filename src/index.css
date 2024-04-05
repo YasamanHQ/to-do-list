@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light Mode */
+  --light-gray: #fafafa;
+  --blue: #a6adff;
+  --light-grayish-blue: #e4e5f1;
+  --lighter-grayish-blue: #d2d3db;
+  --dark-grayish-blue: #9394a5;
+  --darker-grayish-blue: #484b6a;
+  /* Dark Mode */
+  --darkMode-bg: #161722;
+  --darkMode-bg-list: #25273c;
+  --darkMode-footer-hover: #e4e5f1;
+  --darkMode-item-border: #393a4c;
+  --darkMode-font: #cacde8;
+  --darkMode-task-done: #4d5066;
+
+  --delete: #bb0707;
+}
+
+@layer components {
+  .check {
+    @apply absolute left-0 top-[50%] ml-10 flex h-6 w-6 translate-y-[-50%] cursor-pointer items-center justify-center rounded-full text-sm text-[var(--light-gray)] outline-none ring-2 ring-[var(--lighter-grayish-blue)] transition duration-300 dark:ring-[var(--darkMode-item-border)];
+  }
+}
